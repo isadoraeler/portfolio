@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Isadora Roosevelt Eler | Estudante de ADS</title>
+<meta name="description" content="Portfólio de Isadora Roosevelt Eler, estudante de Análise e Desenvolvimento de Sistemas. Projetos de inteligência artificial, web e interface.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="imagens/favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#topo" class="logo" aria-label="Início"><span class="logo-dot"></span></a>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#contato" class="nav-cta">Contato</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="topo">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="status-line">
+        <span class="status-dot" aria-hidden="true"></span>
+        Disponível para estágio — Presencial ou Remoto
+      </p>
+
+      <h1 class="hero-title">Isadora Roosevelt Eler<span class="cursor" aria-hidden="true">_</span></h1>
+      <p class="hero-role">Estudante de ADS · Buscando Estágio</p>
+
+      <p class="hero-desc">
+        Estudante do 4º período de Análise e Desenvolvimento de Sistemas na UVV, explorando interfaces, web e inteligência artificial. Aprendo construindo: meus projetos vão de telas no Figma a um detector de objetos em Python. Busco meu primeiro estágio para crescer na prática.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn--primary">Ver projetos</a>
+        <a href="#contato" class="btn btn--ghost">Falar comigo</a>
+      </div>
+    </div>
+
+    <div class="terminal-card" aria-hidden="true">
+      <div class="terminal-head">
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-dot"></span>
+        <span class="terminal-name">perfil.config</span>
+      </div>
+      <pre class="terminal-body"><span class="t-key">role</span>       <span class="t-punct">:</span> Estágio
+<span class="t-key">local</span>      <span class="t-punct">:</span> Vila Velha / ES
+<span class="t-key">curso</span>      <span class="t-punct">:</span> ADS (UVV)
+<span class="t-key">interesses</span> <span class="t-punct">:</span> IA, web, interfaces
+<span class="t-key">skills</span>     <span class="t-punct">:</span> Python, Java, HTML/CSS/JS
+<span class="t-key">status</span>     <span class="t-punct">:</span> <span class="t-status">disponível</span></pre>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <p class="eyebrow">Sobre</p>
+    <div class="about-grid">
+      <div class="about-photo">
+        <img src="imagens/foto-perfil.jpeg" alt="Foto de perfil de Isadora">
+      </div>
+      <div class="about-text">
+        <p>
+          Sou estudante de ADS na UVV e ainda estou descobrindo em qual área da tecnologia quero me aprofundar. Por isso meus projetos são variados: interfaces no Figma, uma landing page em HTML, CSS e JavaScript e um detector de objetos com inteligência artificial.
+        </p>
+        <p>
+          Gosto de aprender fazendo. Quando algo não funciona, investigo até entender o motivo. No detector de produtos, por exemplo, testei uma solução que não melhorou o resultado e usei isso para descobrir que o gargalo estava na variedade das fotos.
+        </p>
+        <ul class="tag-list">
+          <li>Python</li>
+          <li>Visão computacional</li>
+          <li>HTML/CSS/JS</li>
+          <li>Figma</li>
+          <li>Git e GitHub</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projetos">
+    <p class="eyebrow">Projetos</p>
+    <h2 class="section-title">Projetos selecionados</h2>
+    <p class="section-sub">Do código à interface. Clique em um projeto para ver como ele foi feito.</p>
+
+    <div class="gallery" id="gallery">
+
+      <!-- ===== DETECTOR DE PRODUTOS ===== -->
+      <button class="gallery-item" data-project="detector">
+        <img src="imagens/image.png" alt="Capa do projeto Detector de produtos de higiene com YOLOv7">
+        <span class="gallery-meta">
+          <span class="gallery-title">Detector de produtos</span>
+          <span class="gallery-cat">Python · YOLOv7</span>
+        </span>
+      </button>
+
+      <template class="project-content" data-project="detector">
+        <p class="modal-eyebrow">Inteligência artificial / Python</p>
+        <h3 class="modal-title">Detector de produtos de higiene</h3>
+        <p class="modal-desc">
+          Trabalho em grupo na UVV (4 pessoas): um modelo de visão computacional que identifica 12 tipos de produto de higiene pessoal em fotos, como shampoo, desodorante, pasta de dente e perfume. Na coleta, fiquei com os produtos de banho, proteção, álcool em gel e sabonetes, e fui responsável por treinar, avaliar e analisar o modelo.
+          <br><br>
+          Usamos a rede <b>YOLOv7</b> com fine-tuning a partir de pesos pré-treinados na base COCO, treinada no Google Colab por 100 épocas (imagens de 640 px, lotes de 16). As imagens foram rotuladas no MakeSense.ai em formato YOLO: um arquivo de texto por foto, com a classe e a posição da caixa de cada objeto.
+        </p>
+
+        <div class="stats-row">
+          <div class="stat"><b>0,78</b><span>mAP@.5 no teste</span></div>
+          <div class="stat"><b>12</b><span>classes</span></div>
+          <div class="stat"><b>671</b><span>imagens (470 treino, 136 validação, 65 teste)</span></div>
+        </div>
+
+        <h4 class="modal-sub">O que descobri</h4>
+        <ul class="modal-list">
+          <li>Treinar do zero deu mAP@.5 de 0,16. Partir de pesos pré-treinados (transfer learning) chegou a 0,76 na validação e 0,78 no teste, com recall de 84%.</li>
+          <li>Usei a curva F1 para escolher o limiar de confiança do modelo (0,30, onde o F1 médio chega ao pico), em vez de um valor qualquer.</li>
+          <li>Os melhores resultados foram perfume (0,93), papel higiênico (0,92) e pasta de dente (0,92). O mais fraco foi o shampoo (0,36): shampoo, condicionador e hidratante são frascos parecidos que o modelo confunde entre si, e têm menos fotos que as outras classes.</li>
+          <li>Testei balanceamento de classes e o resultado não melhorou (0,76 no teste). Concluí que o problema é a variedade das fotos, e não a quantidade de vezes que o modelo as vê.</li>
+        </ul>
+
+        <h4 class="modal-sub">Resultados do modelo</h4>
+        <div class="modal-grid">
+          <figure>
+            <img src="imagens/papel_higienico_1.jpg" alt="Detecção de papel higiênico feita pelo modelo" style="object-position: center 30%;" onerror="this.closest('figure').remove()">
+            <figcaption>Papel higiênico</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/sabonete.png" alt="Detecção de sabonete líquido feita pelo modelo" style="object-position: center top;" onerror="this.closest('figure').remove()">
+            <figcaption>Sabonete líquido</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/perfume_1.jpg" alt="Detecção de perfume feita pelo modelo" style="object-position: center top;" onerror="this.closest('figure').remove()">
+            <figcaption>Perfume</figcaption>
+          </figure>
+        </div>
+
+        <div class="modal-screens">
+          <figure>
+            <img src="imagens/yolo-matriz.png" alt="Matriz de confusão do modelo" onerror="this.closest('figure').remove()">
+            <figcaption>Matriz de confusão — mostra quais produtos o modelo troca entre si.</figcaption>
+          </figure>
+        </div>
+
+        <a class="btn btn--primary modal-figma" href="https://github.com/isadoraeler/detector-produtos-higiene" target="_blank" rel="noopener">
+          Ver código no GitHub ↗
+        </a>
+      </template>
+
+      <!-- ===== ECOVIDA ===== -->
+      <button class="gallery-item" data-project="ecovida">
+        <img src="imagens/ecovida.png" alt="Projeto EcoVida">
+        <span class="gallery-meta">
+          <span class="gallery-title">Projeto EcoVida</span>
+          <span class="gallery-cat">Figma</span>
+        </span>
+      </button>
+
+      <template class="project-content" data-project="ecovida">
+        <p class="modal-eyebrow">Projeto integrado / Figma</p>
+        <h3 class="modal-title">Projeto EcoVida</h3>
+        <p class="modal-desc">
+          Durante a graduação em Análise e Desenvolvimento de Sistemas na UVV, desenvolvemos um Projeto Integrado em parceria com a empresa Fortes, com o objetivo de analisar um problema real e propor uma solução utilizando tecnologia.
+          <br><br>
+          O projeto abordou a destinação dos resíduos gerados em ações sociais, buscando conectar organizações, pontos de coleta e recicladores por meio de uma solução digital, contribuindo para a sustentabilidade e o impacto social.
+        </p>
+
+        <div class="modal-screens">
+          <figure>
+            <img src="imagens/telaeco.png" alt="Tela inicial do EcoVida com seção Sobre Nós">
+            <figcaption>Tela inicial — apresentação da plataforma e acesso por tipo de perfil (ONG, usuário ou empresa).</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/brandbook.png" alt="Guia de estilo do EcoVida com paleta de cores, logotipo e telas de cadastro">
+            <figcaption>Guia de estilo — paleta de cores, variações do logotipo e telas de cadastro/login.</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/telaprincipal.png" alt="Tela de funcionalidades do EcoVida: mapa de coleta, atendimento e impacto">
+            <figcaption>Funcionalidades principais — mapa de coleta, atendimento estratégico e acompanhamento de impacto.</figcaption>
+          </figure>
+        </div>
+
+        <a class="btn btn--primary modal-figma" href="https://www.figma.com/proto/Zh9atKLdrsh0GuoHLDM3y0/Projeto-EcoVida?node-id=37-74&t=UXx57QtyoNRPrV7q-1" target="_blank" rel="noopener">
+          Ver protótipo no Figma ↗
+        </a>
+      </template>
+
+      <!-- ===== LANDING PAGE ===== -->
+      <button class="gallery-item" data-project="projeto2">
+        <img src="imagens/landingpage.png" alt="Landing Page">
+        <span class="gallery-meta">
+          <span class="gallery-title">Landing Page</span>
+          <span class="gallery-cat">HTML5, CSS3 e JS</span>
+        </span>
+      </button>
+
+      <template class="project-content" data-project="projeto2">
+        <p class="modal-eyebrow">Desenvolvimento web / HTML5, CSS3 e JS</p>
+        <h3 class="modal-title">Landing Page</h3>
+        <p class="modal-desc">
+          Projeto desenvolvido durante a graduação para aplicar na prática os conhecimentos de HTML5 e CSS3 na criação de uma landing page.
+          <br><br>
+          A página apresenta minha trajetória acadêmica e profissional, habilidades, interesses e serviços de desenvolvimento web. Conta com várias páginas, navegação entre seções, formulário de contato, tabelas, links internos e externos e layout responsivo.
+        </p>
+        <div class="modal-screens">
+          <figure>
+            <img src="imagens/lpinicial.png" alt="Tela principal da landing page">
+            <figcaption>Tela principal da landing page.</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/abagithub.png" alt="Aba do GitHub da landing page">
+            <figcaption>Aba do GitHub, com acesso aos meus repositórios.</figcaption>
+          </figure>
+        </div>
+        <a class="btn btn--primary modal-figma" href="https://isadoraeler.github.io/Landing-Page/" target="_blank" rel="noopener">
+          Ver página web ↗
+        </a>
+      </template>
+
+      <!-- ===== LIFEXP ===== -->
+      <button class="gallery-item" data-project="lifexp">
+        <img src="imagens/lifexp-capa.png" alt="Projeto LifeXP">
+        <span class="gallery-meta">
+          <span class="gallery-title">Projeto LifeXP</span>
+          <span class="gallery-cat">Figma</span>
+        </span>
+      </button>
+
+      <template class="project-content" data-project="lifexp">
+        <p class="modal-eyebrow">UX/UI / Figma</p>
+        <h3 class="modal-title">Projeto LifeXP</h3>
+        <p class="modal-desc">
+          O LifeXP é um projeto acadêmico de UX/UI no Figma, desenvolvido por mim e por colegas do curso para o <b>InovaWeek 2026</b>, evento de inovação da universidade. O projeto <b>ainda está em desenvolvimento e será apresentado durante o evento.</b>
+          <br><br>
+          Ele transforma o gerenciamento de tarefas em uma experiência inspirada em RPGs. Para aumentar o engajamento, o usuário ganha XP e moedas, sobe de nível e desbloqueia recompensas ao concluir tarefas.
+          <br><br>
+          A interface foi adaptada para Desktop/Web, com um dashboard amplo de progresso. A identidade visual é inspirada em jogos 16-bit, com pixel art, dark mode e paleta em roxo e dourado.
+          <br><br>
+          As telas desenvolvidas incluem login, dashboard, gerenciador de tarefas, loja de itens e perfil do jogador, além de sistema de XP, conquistas e recompensas.
+        </p>
+        <div class="modal-screens">
+          <figure>
+            <img src="imagens/principaljogo.png" alt="Tela inicial do LifeXP">
+            <figcaption>Tela inicial — apresentação da plataforma e seus botões.</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/fazerlogin.png" alt="Tela de login do LifeXP">
+            <figcaption>Login — acesso à conta na plataforma.</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/perfiljogo.png" alt="Tela de perfil do LifeXP">
+            <figcaption>Perfil — relatório do jogador e tudo o que ele já conquistou.</figcaption>
+          </figure>
+          <figure>
+            <img src="imagens/tarefasjogo.png" alt="Tela de tarefas do LifeXP">
+            <figcaption>Tarefas — lista das tarefas escolhidas, com opção de adicionar uma nova.</figcaption>
+          </figure>
+        </div>
+
+        <p class="modal-desc">Como o projeto ainda está <b>em desenvolvimento</b>, o protótipo completo no Figma não está disponível.</p>
+      </template>
+
+      <!-- ===== STUDYTRACK ===== -->
+      <button class="gallery-item" data-project="studytrack">
+        <img src="imagens/studytracks-logo.png" alt="Projeto StudyTrack">
+        <span class="gallery-meta">
+          <span class="gallery-title">StudyTrack</span>
+          <span class="gallery-cat">Python · Flask · PostgreSQL · Docker</span>
+        </span>
+      </button>
+
+      <template class="project-content" data-project="studytrack">
+        <p class="modal-eyebrow">Desenvolvimento Web / Docker</p>
+        <h3 class="modal-title">StudyTrack — Controle de Estudos</h3>
+        <p class="modal-desc">
+          O StudyTrack é uma aplicação web desenvolvida para registrar e acompanhar sessões de estudo. A aplicação permite registrar a matéria estudada, a data, a duração da sessão e observações.
+          <br><br>
+          O projeto foi desenvolvido utilizando <b>Python, Flask e PostgreSQL</b>, com a aplicação web e o banco de dados executados em containers separados utilizando <b>Docker e Docker Compose</b>.
+        </p>
+
+        <div class="stat">
+  <b>PostgreSQL 16</b>
+  <span>banco de dados</span>
+</div>
+
+<div class="stat">
+  <b>5000</b>
+  <span>porta da aplicação</span>
+</div>
+
+</div>
+
+<h4 class="modal-sub">Tecnologias utilizadas</h4>
+
+<ul class="modal-list"> <li>Python</li> <li>Flask</li> <li>PostgreSQL 16</li> <li>HTML5 e CSS3</li> <li>Docker e Docker Compose</li> <li>Psycopg</li> <li>Python-dotenv</li> </ul>
+
+<h4 class="modal-sub">Arquitetura do projeto</h4>
+
+<p class="modal-desc"> O projeto utiliza dois containers principais. O <b>studytrack-web</b> executa a aplicação Flask, enquanto o <b>studytrack-banco</b> executa o PostgreSQL. <br><br> Os containers se comunicam por meio de uma rede Docker própria chamada <b>studytrack-rede</b>. O banco utiliza um volume chamado <b>dados_postgres</b> para garantir a persistência dos dados. </p>
+
+<h4 class="modal-sub">Banco de dados</h4>
+
+<p class="modal-desc"> O PostgreSQL possui a tabela <b>estudos</b>, responsável por armazenar os registros das sessões de estudo. <br><br> Os principais campos são: </p>
+
+<ul class="modal-list"> <li><b>id</b></li> <li><b>materia</b></li> <li><b>data</b></li> <li><b>duracao</b></li> <li><b>observacoes</b></li> </ul>
+
+<h4 class="modal-sub">Docker</h4>
+
+<ul class="modal-list"> <li>Dockerfile para criação da imagem da aplicação.</li> <li>Docker Compose para executar os serviços.</li> <li>Volume <b>dados_postgres</b> para persistência dos dados.</li> <li>Rede <b>studytrack-rede</b> para comunicação entre os containers.</li> <li>Variáveis de ambiente para configuração do PostgreSQL.</li> <li>Arquivo <b>.dockerignore</b> para controlar os arquivos enviados para a imagem.</li> </ul>
+
+<h4 class="modal-sub">Como executar</h4>
+
+<p class="modal-desc"> Com o Docker Desktop instalado e em execução, basta acessar a pasta do projeto pelo terminal e executar: </p>
+
+<pre class="terminal-body">docker compose up -d --build</pre>
+
+<p class="modal-desc"> Depois, a aplicação pode ser acessada pelo navegador em <b>http://localhost:5000</b>. </p>
+
+<a class="btn btn--primary modal-figma" href="https://github.com/isadoraeler/studytrack" target="_blank" rel="noopener">
+Ver projeto no GitHub ↗
+</a> 
+</template>
+    </div>
+  </section>
+
+  <section class="section" id="ferramentas">
+    <p class="eyebrow">Ferramentas</p>
+    <h2 class="section-title">O que eu uso</h2>
+
+    <div class="tools-grid">
+      <span class="tool-chip">Python</span>
+      <span class="tool-chip">Google Colab</span>
+      <span class="tool-chip">YOLOv7</span>
+      <span class="tool-chip">HTML &amp; CSS</span>
+      <span class="tool-chip">JavaScript</span>
+      <span class="tool-chip">Java</span>
+      <span class="tool-chip">PostgreSQL / SQL Server</span>
+      <span class="tool-chip">Figma</span>
+      <span class="tool-chip">Canva</span>
+      <span class="tool-chip">VS Code / PyCharm / NetBeans</span>
+      <span class="tool-chip">GitHub</span>
+      <span class="tool-chip">ChatGPT / Claude / Gemini</span>
+    </div>
+  </section>
+
+  <section class="section section--contact" id="contato">
+    <p class="eyebrow">Contato</p>
+    <h2 class="section-title">Vamos conversar?</h2>
+    <p class="section-sub">
+      Estou procurando meu primeiro estágio, presencial ou remoto.
+    </p>
+
+    <a class="btn btn--primary btn--lg" href="mailto:isadoraeler19@gmail.com">
+      isadoraeler19@gmail.com</a>
+
+    <div class="social-row">
+      <a href="https://wa.me/5527998197003" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.instagram.com/isadoraeler/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/isadora-eler/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/isadoraeler" target="_blank" rel="noopener">GitHub</a>
+      <a href="curriculo.pdf" target="_blank" rel="noopener">Currículo (PDF)</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <span>© 2026 Isadora Roosevelt Eler</span>
+  <span>Vila Velha, ES</span>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="modal-panel">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">×</button>
+    <div class="modal-body" id="modalBody">
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

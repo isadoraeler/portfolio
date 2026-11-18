@@ -136,7 +136,7 @@
           <!-- ===== DETECTOR DE PRODUTOS ===== -->
           <button class="gallery-item" data-project="detector">
             <img
-              src="imagens/image.png"
+              src="imagens/logo-yolo.png"
               alt="Capa do projeto Detector de produtos de higiene com YOLOv7"
             />
             <span class="gallery-meta">
@@ -252,7 +252,118 @@
               Ver código no GitHub ↗
             </a>
           </template>
+<!-- ===== WASTEWISE ===== -->
+<button class="gallery-item" data-project="wastewise">
+  <img src="imagens/wastewise.png" alt="Projeto WasteWise" />
+  <span class="gallery-meta">
+    <span class="gallery-title">WasteWise</span>
+    <span class="gallery-cat">Python · PyTorch · Gradio · SQLite</span>
+  </span>
+</button>
 
+<template class="project-content" data-project="wastewise">
+  <p class="modal-eyebrow">Inteligência Artificial / Visão Computacional</p>
+  <h3 class="modal-title">WasteWise — Classificador visual de resíduos</h3>
+
+  <p class="modal-desc">
+    O WasteWise é uma aplicação web que utiliza inteligência artificial
+    para estimar a categoria de um resíduo a partir de uma imagem.
+    O usuário envia uma foto e recebe as categorias mais prováveis,
+    acompanhadas de suas respectivas estimativas de confiança.
+    <br /><br />
+    O projeto foi desenvolvido utilizando <b>Python, PyTorch,
+    Torchvision e Gradio</b>. Para a classificação, foi utilizado
+    o modelo <b>MobileNetV3-Small</b>, com a técnica de
+    <b>Transfer Learning</b>, treinado com imagens do conjunto de dados
+    RealWaste.
+  </p>
+
+  <div class="stat">
+    <b>9 categorias</b>
+    <span>classificação de resíduos</span>
+  </div>
+
+  <div class="stat">
+    <b>MobileNetV3-Small</b>
+    <span>modelo de visão computacional</span>
+  </div>
+
+  <h4 class="modal-sub">Tecnologias utilizadas</h4>
+
+  <ul class="modal-list">
+    <li>Python</li>
+    <li>PyTorch</li>
+    <li>Torchvision</li>
+    <li>MobileNetV3-Small</li>
+    <li>Transfer Learning</li>
+    <li>Gradio</li>
+    <li>SQLite</li>
+    <li>Pillow</li>
+    <li>Render</li>
+  </ul>
+
+  <h4 class="modal-sub">Classificação de resíduos</h4>
+
+  <p class="modal-desc">
+    O modelo foi treinado para classificar imagens em nove categorias:
+  </p>
+
+  <ul class="modal-list">
+    <li>Cardboard (papelão)</li>
+    <li>Food Organics (resíduos orgânicos)</li>
+    <li>Glass (vidro)</li>
+    <li>Metal (metal)</li>
+    <li>Miscellaneous Trash (lixo diverso)</li>
+    <li>Paper (papel)</li>
+    <li>Plastic (plástico)</li>
+    <li>Textile Trash (resíduos têxteis)</li>
+    <li>Vegetation (vegetação)</li>
+  </ul>
+
+  <h4 class="modal-sub">Estimativa de confiança</h4>
+
+  <p class="modal-desc">
+    Além de apresentar a categoria mais provável, a aplicação exibe
+    as estimativas de confiança das classificações. Quando a confiança
+    da categoria principal fica abaixo de <b>60%</b>, o sistema sinaliza
+    o resultado como incerto, evitando apresentar uma previsão com
+    baixa confiança como se fosse uma certeza.
+  </p>
+
+  <h4 class="modal-sub">Histórico de análises</h4>
+
+  <p class="modal-desc">
+    As análises realizadas são registradas em um banco de dados
+    <b>SQLite</b>, permitindo consultar o histórico de classificações,
+    incluindo as categorias identificadas e suas estimativas de confiança.
+  </p>
+
+  <h4 class="modal-sub">Publicação</h4>
+
+  <p class="modal-desc">
+    A aplicação foi publicada na plataforma <b>Render</b>, permitindo
+    que o classificador seja acessado diretamente pelo navegador,
+    sem a necessidade de executar o projeto localmente.
+  </p>
+
+  <a
+    class="btn btn--primary modal-figma"
+    href="https://wastewise-dehe.onrender.com"
+    target="_blank"
+    rel="noopener"
+  >
+    Acessar aplicação ↗
+  </a>
+
+  <a
+    class="btn btn--primary modal-figma"
+    href="https://github.com/isadoraeler/wastewise"
+    target="_blank"
+    rel="noopener"
+  >
+    Ver projeto no GitHub ↗
+  </a>
+</template>
           <!-- ===== STUDYTRACK ===== -->
           <button class="gallery-item" data-project="studytrack">
             <img src="imagens/studytracks-logo.png" alt="Projeto StudyTrack" />
@@ -369,7 +480,7 @@
           </template>
           <!-- ===== LIFEXP ===== -->
           <button class="gallery-item" data-project="lifexp">
-            <img src="imagens/lifexp-capa.png" alt="Projeto LifeXP" />
+            <img src="imagens/logo-lifexp.png" alt="Projeto LifeXP" />
             <span class="gallery-meta">
               <span class="gallery-title">Projeto LifeXP</span>
               <span class="gallery-cat">Figma</span>
@@ -447,7 +558,7 @@
 
           <!-- ===== LANDING PAGE ===== -->
           <button class="gallery-item" data-project="projeto2">
-            <img src="imagens/landingpage.png" alt="Landing Page" />
+            <img src="imagens/landing-page.png" alt="Landing Page" />
             <span class="gallery-meta">
               <span class="gallery-title">Landing Page</span>
               <span class="gallery-cat">HTML5, CSS3 e JS</span>
@@ -496,7 +607,7 @@
 
           <!-- ===== ECOVIDA ===== -->
           <button class="gallery-item" data-project="ecovida">
-            <img src="imagens/ecovida.png" alt="Projeto EcoVida" />
+            <img src="imagens/logo-ecovida.png" alt="Projeto EcoVida" />
             <span class="gallery-meta">
               <span class="gallery-title">Projeto EcoVida</span>
               <span class="gallery-cat">Figma</span>

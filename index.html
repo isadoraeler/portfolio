@@ -8,6 +8,10 @@
       name="description"
       content="Portfólio de Isadora Roosevelt Eler, estudante de Análise e Desenvolvimento de Sistemas. Projetos de inteligência artificial, web e interface."
     />
+    <meta property="og:title" content="Isadora Roosevelt Eler | Estudante de ADS" />
+    <meta property="og:description" content="Projetos de IA, web e interface." />
+    <meta property="og:image" content="https://isadoraeler.github.io/portfolio/imagens/og.png" />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,28 +23,24 @@
   </head>
   <body>
     <header class="site-header">
-      <a href="#topo" class="logo" aria-label="Início"
-        ><span class="logo-dot"></span
-      ></a>
+  <a href="#topo" class="logo" aria-label="Início">isadora<span class="logo-dot">.</span>dev</a>
 
-      <nav class="site-nav" id="siteNav">
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#ferramentas">Ferramentas</a>
-        <a href="#contato" class="nav-cta">Contato</a>
-      </nav>
+  <nav class="site-nav" id="siteNav">
+    <a href="#sobre">Sobre</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#contato" class="nav-cta">Contato</a>
+  </nav>
 
-      <div class="header-actions">
-        <button
-          class="nav-toggle"
-          id="navToggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-        >
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </header>
+  <div class="header-actions">
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
+      <span class="theme-toggle-dot"></span>
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
 
     <main id="topo">
       <section class="hero">
@@ -58,16 +58,15 @@
           <p class="hero-role">Estudante de ADS · Buscando Estágio</p>
 
           <p class="hero-desc">
-            Estudante do 4º período de Análise e Desenvolvimento de Sistemas na
-            UVV, explorando interfaces, web e inteligência artificial. Aprendo
-            construindo: meus projetos vão de telas no Figma a um detector de
-            objetos em Python. Busco meu primeiro estágio para crescer na
-            prática.
+            Estudante de ADS (4º período, UVV) com projetos em IA, web e interface.
+Busco meu primeiro estágio para aplicar o que aprendi e continuar
+crescendo na prática.
           </p>
 
           <div class="hero-actions">
             <a href="#projetos" class="btn btn--primary">Ver projetos</a>
             <a href="#contato" class="btn btn--ghost">Falar comigo</a>
+            <a href="curriculo-isadora.pdf" class="btn btn--ghost" download>Baixar currículo</a>
           </div>
         </div>
 
@@ -100,10 +99,14 @@
           </div>
           <div class="about-text">
             <p>
-              Sou estudante de ADS na UVV e ainda estou descobrindo em qual área
-              da tecnologia quero me aprofundar. Por isso meus projetos são
-              variados: interfaces no Figma, uma landing page em HTML, CSS e
-              JavaScript e um detector de objetos com inteligência artificial.
+              <p>
+                <p>
+  Sou estudante de ADS na UVV e tenho experiência em IA, web e interface.
+  Meus projetos vão de telas no Figma e uma landing page em HTML, CSS e
+  JavaScript a um detector de objetos com inteligência artificial. Busco um
+  estágio onde possa aplicar isso e me aprofundar.
+</p>
+</p>
             </p>
             <p>
               Gosto de aprender fazendo. Quando algo não funciona, investigo até
@@ -111,15 +114,6 @@
               uma solução que não melhorou o resultado e usei isso para
               descobrir que o gargalo estava na variedade das fotos.
             </p>
-            <ul class="tag-list">
-              <li>Python</li>
-              <li>Visão computacional</li>
-              <li>HTML/CSS/JS</li>
-              <li>Figma</li>
-              <li>Git e GitHub</li>
-              <li>Java</li>
-              <li>SQL</li>
-            </ul>
           </div>
         </div>
       </section>
@@ -149,16 +143,16 @@
             <p class="modal-eyebrow">Inteligência artificial / Python</p>
             <h3 class="modal-title">Detector de produtos de higiene</h3>
             <p class="modal-desc">
-              Projeto Acadêmico de um modelo de visão
+              Projeto acadêmico de um modelo de visão
               computacional que identifica 12 tipos de produto de higiene
               pessoal em fotos, como shampoo, desodorante, pasta de dente e
               perfume. Fui responsável por todas as etapas do projeto, desde 
               a coleta e organização das imagens até o treinamento, avaliação 
               e análise do modelo.
               <br /><br />
-              Foi Utilizado a rede <b>YOLOv7</b> com fine-tuning a partir de pesos
-              pré-treinados na base COCO, treinada no Google Colab por 100
-              épocas (imagens de 640 px, lotes de 16). As imagens foram
+              Utilizei a rede <b>YOLOv7</b> com fine-tuning a partir de pesos
+pré-treinados na base COCO, e treinei o modelo no Google Colab por 100
+épocas (imagens de 640 px, lotes de 16). As imagens foram
               rotuladas no MakeSense.ai em formato YOLO: um arquivo de texto por
               foto, com a classe e a posição da caixa de cada objeto.
             </p>
@@ -229,20 +223,6 @@
               </figure>
             </div>
 
-            <div class="modal-screens">
-              <figure>
-                <img
-                  src="imagens/yolo-matriz.png"
-                  alt="Matriz de confusão do modelo"
-                  onerror="this.closest('figure').remove()"
-                />
-                <figcaption>
-                  Matriz de confusão — mostra quais produtos o modelo troca
-                  entre si.
-                </figcaption>
-              </figure>
-            </div>
-
             <a
               class="btn btn--primary modal-figma"
               href="https://github.com/isadoraeler/detector-produtos-higiene"
@@ -254,7 +234,7 @@
           </template>
 <!-- ===== WASTEWISE ===== -->
 <button class="gallery-item" data-project="wastewise">
-  <img src="imagens/wastewise.png" alt="Projeto WasteWise" />
+  <img loading="lazy" decoding="async" src="imagens/wastewise.png" alt="Projeto WasteWise" />
   <span class="gallery-meta">
     <span class="gallery-title">WasteWise</span>
     <span class="gallery-cat">Python · PyTorch · Gradio · SQLite</span>
@@ -262,7 +242,7 @@
 </button>
 
 <template class="project-content" data-project="wastewise">
-  <p class="modal-eyebrow">Inteligência Artificial / Visão Computacional</p>
+  <p class="modal-eyebrow">Inteligência artificial / Visão computacional</p>
   <h3 class="modal-title">WasteWise — Classificador visual de resíduos</h3>
 
   <p class="modal-desc">
@@ -278,15 +258,10 @@
     RealWaste.
   </p>
 
-  <div class="stat">
-    <b>9 categorias</b>
-    <span>classificação de resíduos</span>
-  </div>
-
-  <div class="stat">
-    <b>MobileNetV3-Small</b>
-    <span>modelo de visão computacional</span>
-  </div>
+  <div class="stats-row stats-row--2">
+  <div class="stat"><b>9 categorias</b><span>classificação de resíduos</span></div>
+  <div class="stat"><b>MobileNetV3-Small</b><span>modelo de visão computacional</span></div>
+</div>
 
   <h4 class="modal-sub">Tecnologias utilizadas</h4>
 
@@ -346,27 +321,15 @@
     sem a necessidade de executar o projeto localmente.
   </p>
 
-  <a
-    class="btn btn--primary modal-figma"
-    href="https://wastewise-dehe.onrender.com"
-    target="_blank"
-    rel="noopener"
-  >
-    Acessar aplicação ↗
-  </a>
-
-  <a
-    class="btn btn--primary modal-figma"
-    href="https://github.com/isadoraeler/wastewise"
-    target="_blank"
-    rel="noopener"
-  >
-    Ver projeto no GitHub ↗
-  </a>
+  <p class="modal-desc">O primeiro acesso pode levar cerca de 1 minuto para carregar.</p>
+  <div class="modal-links">
+  <a class="btn btn--primary modal-figma" href="https://wastewise-dehe.onrender.com" target="_blank" rel="noopener">Acessar aplicação ↗</a>
+  <a class="btn btn--ghost modal-figma" href="https://github.com/isadoraeler/wastewise" target="_blank" rel="noopener">Ver código no GitHub ↗</a>
+</div>
 </template>
           <!-- ===== STUDYTRACK ===== -->
           <button class="gallery-item" data-project="studytrack">
-            <img src="imagens/studytracks-logo.png" alt="Projeto StudyTrack" />
+            <img loading="lazy" decoding="async" src="imagens/studytracks-logo.png" alt="Projeto StudyTrack" />
             <span class="gallery-meta">
               <span class="gallery-title">StudyTrack</span>
               <span class="gallery-cat"
@@ -376,7 +339,7 @@
           </button>
 
           <template class="project-content" data-project="studytrack">
-            <p class="modal-eyebrow">Desenvolvimento Web / Docker</p>
+            <p class="modal-eyebrow">Desenvolvimento web / Docker</p>
             <h3 class="modal-title">StudyTrack — Controle de Estudos</h3>
             <p class="modal-desc">
               O StudyTrack é uma aplicação web desenvolvida para registrar e
@@ -389,15 +352,10 @@
               <b>Docker e Docker Compose</b>.
             </p>
 
-            <div class="stat">
-              <b>PostgreSQL 16</b>
-              <span>banco de dados</span>
-            </div>
-
-            <div class="stat">
-              <b>5000</b>
-              <span>porta da aplicação</span>
-            </div>
+           <div class="stats-row stats-row--2">
+  <div class="stat"><b>PostgreSQL 16</b><span>banco de dados</span></div>
+  <div class="stat"><b>5000</b><span>porta da aplicação</span></div>
+</div>
 
             <h4 class="modal-sub">Tecnologias utilizadas</h4>
 
@@ -480,7 +438,7 @@
           </template>
           <!-- ===== LIFEXP ===== -->
           <button class="gallery-item" data-project="lifexp">
-            <img src="imagens/logo-lifexp.png" alt="Projeto LifeXP" />
+            <img loading="lazy" decoding="async" src="imagens/logo-lifexp.png" alt="Projeto LifeXP" />
             <span class="gallery-meta">
               <span class="gallery-title">Projeto LifeXP</span>
               <span class="gallery-cat">Figma</span>
@@ -558,7 +516,7 @@
 
           <!-- ===== LANDING PAGE ===== -->
           <button class="gallery-item" data-project="projeto2">
-            <img src="imagens/landing-page.png" alt="Landing Page" />
+            <img loading="lazy" decoding="async" src="imagens/landing-page.png" alt="Capa da landing page pessoal" />
             <span class="gallery-meta">
               <span class="gallery-title">Landing Page</span>
               <span class="gallery-cat">HTML5, CSS3 e JS</span>
@@ -607,7 +565,7 @@
 
           <!-- ===== ECOVIDA ===== -->
           <button class="gallery-item" data-project="ecovida">
-            <img src="imagens/logo-ecovida.png" alt="Projeto EcoVida" />
+            <img loading="lazy" decoding="async" src="imagens/logo-ecovida.png" alt="Projeto EcoVida" />
             <span class="gallery-meta">
               <span class="gallery-title">Projeto EcoVida</span>
               <span class="gallery-cat">Figma</span>
@@ -691,6 +649,11 @@
           <span class="tool-chip">VS Code / PyCharm / NetBeans</span>
           <span class="tool-chip">GitHub</span>
           <span class="tool-chip">ChatGPT / Claude / Gemini</span>
+          <span class="tool-chip">Flask</span>
+<span class="tool-chip">PyTorch</span>
+<span class="tool-chip">Docker</span>
+<span class="tool-chip">React Native</span>
+<span class="tool-chip">MySQL</span>
         </div>
       </section>
 
@@ -701,13 +664,9 @@
           Estou procurando meu primeiro estágio, presencial ou remoto.
         </p>
 
-        <a
-          class="btn btn--primary btn--lg"
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=isadoraeler19@gmail.com"
-          target="_blank"
-        >
-          isadoraeler19@gmail.com
-        </a>
+        <a class="btn btn--primary btn--lg" href="mailto:isadoraeler19@gmail.com">
+  isadoraeler19@gmail.com
+</a>
 
         <div class="social-row">
           <a href="https://wa.me/5527998197003" target="_blank" rel="noopener"
@@ -741,7 +700,7 @@
     </footer>
 
     <div class="lightbox" id="lightbox" aria-hidden="true">
-      <div class="modal-panel">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">
           ×
         </button>
